@@ -1,38 +1,127 @@
-.App {
+#textblock {
+  background-color: #210002;
+  height: 100vh;
+}
+
+#textblock-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+#textblock-title {
+  color: #ffaf1b;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+}
+
+#textblock-content {
+  color: #ffaf1b;
+  font-size: 20px;
+}
+
+#textblock-footer {
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#textblock-devsense {
+  text-decoration: none;
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.animation,
+.animation_layer {
+  height: 1000px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+}
+
+#artback {
+  background-image: url(./images/background.png);
+}
+
+#mountain {
+  background-image: url(./images/Kailu.png);
+}
+
+#logoland {
+  background-image: url(./images/sun.jpg);
+}
+
+/* #logoland {
+  background-image: url(./images/logo_land.png);
+} */
+
+#jungle1 {
+  background-image: url(./images/jungle1.png);
+}
+
+#jungle2 {
+  background-image: url(./images/jungle2.png);
+}
+
+#jungle3 {
+  background-image: url(./images/jungle3.png);
+}
+
+#jungle4 {
+  background-image: url(./images/jungle4.png);
+}
+
+#jungle5 {
+  background-image: url(./images/jungle5.png);
+}
+
+#manonmountain {
+  background-image: url(./images/man_on_mountain.png);
+}
+
+#name {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffa500; /* Darker orange text color */
+  padding: 80px; /* Adjust padding as needed */
+  font-size: 36px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /*Add a Subtle shadow to it */
+  opacity: 0;
+  animation: fadeIn 3s forwards;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
